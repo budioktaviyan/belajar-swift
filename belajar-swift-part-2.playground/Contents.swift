@@ -93,3 +93,12 @@ let aX: Int16 = 12
 let bX: UInt8 = 255
 let cX: Int32 = -100000
 let answer = Int(a) + Int(b) + Int(c)
+
+let dededankaka = (kaka: "Amira", dede: "Sevina")
+let kaka = dededankaka.kaka
+let dede = dededankaka.dede
+
+var kakak = "Amira"
+var dedek = "Sevina"
+print("Halo \(kakak)")
+print("Aku \(dede)")
