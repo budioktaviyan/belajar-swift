@@ -102,3 +102,28 @@ var kakak = "Amira"
 var dedek = "Sevina"
 print("Halo \(kakak)")
 print("Aku \(dede)")
+
+let testCoordinates = (2, 3)
+let namedCoordinate = (row: 1, column: 2)
+
+// Only 3 example
+let characterX: Character = "🐶"
+let string: String = "Dog"
+let stringX: String = "🐶"
+
+// Not valid code -> let tuple = (day: 15, month: 8, year: 2015); let day = tuple.Day
+// let only for constant value and cannot be modify -> let name = "Matt"; name += " Galloway"
+
+let tuple = (100, 1.5, 10)
+let value = tuple.1 // Type at index 1 is Double
+
+let tupleX = (day: 15, month: 8, year: 2015)
+let month = tupleX.month // Type at index named 'month' is Int
+
+let number = 10
+let multiplier = 5
+let summary = "\(number) multiplied by \(multiplier) equals \(number * multiplier)" // Type for summary is String
+
+let aPlus = 4
+let bPlus: Int32 = 100
+let cPlus: UInt8 = 12
