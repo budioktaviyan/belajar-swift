@@ -127,3 +127,7 @@ let summary = "\(number) multiplied by \(multiplier) equals \(number * multiplie
 let aPlus = 4
 let bPlus: Int32 = 100
 let cPlus: UInt8 = 12
+let totalPlus = (Int(aPlus) + Int(bPlus)) - Int(cPlus) // Sum is 92
+
+let doubles: Double = Double.pi
+let floats: Float = Float.pi
