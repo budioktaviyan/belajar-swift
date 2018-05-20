@@ -343,3 +343,80 @@ for rowRange in 0..<8 where rowRange % 2 == 1 {
     }
 }
 sumRange
+
+// Switch case learning
+let numberValue = 10
+switch numberValue {
+case 0:
+    print("Zero")
+default:
+    print("Non-zero")
+}
+
+let numberOther = 10
+switch numberOther {
+case 10:
+    print("It's ten!")
+default:
+    break
+}
+
+let stringType = "Dog"
+switch stringType {
+case "Cat", "Dog":
+    print("Animal is a house pet.")
+default:
+    print("Animal is not a house pet.")
+}
+
+let hourOfDayX = 12
+let timeOfDayX: String
+switch hourOfDayX {
+case 0, 1, 2, 3, 4, 5:
+    timeOfDayX = "Early morning"
+case 6, 7, 8, 9, 10, 11:
+    timeOfDayX = "Morning"
+case 12, 13, 14, 15, 16:
+    timeOfDayX = "Afternoon"
+case 17, 18, 19:
+    timeOfDayX = "Evening"
+case 20, 21, 22, 23:
+    timeOfDayX = "Late evening"
+default:
+    timeOfDayX = "INVALID HOUR!"
+}
+print(timeOfDayX)
+
+let hourOfDayRange = 12
+let timeOfDayRange: String
+switch hourOfDayRange {
+case 0...5:
+    timeOfDayRange = "Early morning"
+case 6...11:
+    timeOfDayRange = "Morning"
+case 12...16:
+    timeOfDayRange = "Afternoon"
+case 17...19:
+    timeOfDayRange = "Evening"
+case 20..<24:
+    timeOfDayRange = "Late evening"
+default:
+    timeOfDayRange = "INVALID HOUR!"
+}
+print(timeOfDayRange)
+
+let numberCondition = 10
+switch numberCondition {
+case let x where x % 2 == 0:
+    print("Even")
+default:
+    print("Odd")
+}
+
+let numberAgain = 10
+switch numberAgain {
+case _ where numberAgain % 2 == 0:
+    print("Even")
+default:
+    print("Odd")
+}
