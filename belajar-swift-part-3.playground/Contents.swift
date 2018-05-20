@@ -420,3 +420,131 @@ case _ where numberAgain % 2 == 0:
 default:
     print("Odd")
 }
+
+let coordinates = (x: 3, y: 2, z: 5)
+switch coordinates {
+case (0, 0, 0): // 1
+    print("Origin")
+case (_, 0, 0): // 2
+    print("On the x-axis.")
+case (0, _, 0): // 3
+    print("On the y-axis.")
+case (0, 0, _): // 4
+    print("On the z-axis.")
+default:        // 5
+    print("Somewhere in space")
+}
+
+let coordinatesX = (x: 3, y: 2, z: 5)
+switch coordinatesX {
+case (0, 0, 0):
+    print("Origin")
+case (let x, 0, 0):
+    print("On the x-axis at x = \(x)")
+case (0, let y, 0):
+    print("On the y-axis at y = \(y)")
+case (0, 0, let z):
+    print("On the z-axis at z = \(z)")
+case let (x, y, z):
+    print("Somewhere in space at x = \(x), y = \(y), z = \(z)")
+}
+
+
+let coordinatesZ = (x: 3, y: 2, z: 5)
+switch coordinatesZ {
+case let (x, y, _) where y == x:
+    print("Along the y = x line.")
+case let (x, y, _) where y == x * x:
+    print("Along the y = x^2 line.")
+default:
+    break
+}
+
+// Exercising
+let myAgeZ = 30
+switch myAgeZ {
+case _ where myAgeZ >= 0 && myAgeZ <= 2:
+    print("Infant")
+case _ where myAgeZ >= 3 && myAgeZ <= 12:
+    print("Child")
+case _ where myAgeZ >= 13 && myAgeZ <= 19:
+    print("Teenager")
+case _ where myAgeZ >= 20 && myAgeZ <= 39:
+    print("Adult")
+case _ where myAgeZ >= 40 && myAgeZ <= 60:
+    print("Middle aged")
+case _ where myAgeZ >= 61:
+    print("Elderly")
+default:
+    print("Invalid age")
+}
+
+let tuple = ("Matt", 30)
+switch tuple {
+case let (name, age) where age >= 0 && age <= 2:
+    print("\(name) is a infant")
+case let (name, age) where age >= 3 && age <= 12:
+    print("\(name) is a child")
+case let (name, age) where age >= 13 && age <= 19:
+    print("\(name) is a teenager")
+case let (name, age) where age >= 20 && age <= 39:
+    print("\(name) is an adult")
+case let (name, age) where age >= 40 && age <= 60:
+    print("\(name) is a middle aged")
+case let (name, age) where age >= 61:
+    print("\(name) is a elderly")
+default:
+    print("Invalid age")
+}
+
+// Another challenge
+var sumThing = 0
+for i in 0...5 {
+    sumThing += i
+}
+sumThing
+// sumThing = 15, 6 iterations (0, 1, 2, 3, 4, 5)
+
+var aLotOfAs = ""
+while aLotOfAs.count < 10 {
+    aLotOfAs += "a"
+}
+aLotOfAs
+aLotOfAs.count
+// aLotOfAs contains 10 instances of "a"
+
+let coordinatesZ1 = (1, 5, 0) // On the x/y plane
+let coordinatesZ2 = (2, 2, 2) // x = y = z
+let coordinatesZ3 = (3, 0, 1) // On the x/z plane
+let coordinatesZ4 = (3, 2, 5) // Nothing special
+let coordinatesZ5 = (0, 2, 4) // On the y/z plane
+
+switch coordinatesZ5 {
+case let (x, y, z) where x == y && y == z:
+    print("x = y = z")
+case (_, _, 0):
+    print("On the x/y plane")
+case (_, 0, _):
+    print("On the x/z plane")
+case (0, _, _):
+    print("On the y/z plane")
+default:
+    print("Nothing special")
+}
+
+// Ranges must always be increasing.  With a closed range the second number is always included in the range.
+let halfOpenRangeX = 100..<100 // empty
+let closedRangeX = 100...100   // contains the number 100
+halfOpenRangeX.isEmpty
+closedRangeX.isEmpty
+
+var value = 10
+for _ in 0...10 {
+    print(value)
+    value -= 1
+}
+
+var  valueX = 0.0
+for counterX in 0...10 {
+    print(Double(counterX)*0.1)
+}
